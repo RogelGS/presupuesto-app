@@ -1,0 +1,13 @@
+<form (ngSubmit)=" f.form.valid && addValue()" #f="ngForm">
+    <div class="agregar">
+        <div class="agregar_contenedor">
+            <select [ngClass]="{redfocus: type === '-'}" (change)="operationType($event)" class="agregar_tipo">
+                <option value="+" selected>+</option>
+                <option value="-">-</option>
+            </select>
+            <input required [ngClass]="{redfocus: type === '-'}" name="inputDescription" [(ngModel)]="inputDescription" type="text" class="agregar_descripcion" placeholder="Agregar Descripción">
+            <input required [ngClass]="{redfocus: type === '-'}" name="inputValue" [(ngModel)]="inputValue" type="number" class="agregar_valor" placeholder="Valor">
+            <button type="submit" class="agregar_btn"><i [ngClass]="{red: type === '-'}" class="ion-ios-checkmark-outline"></i></button>
+        </div>
+    </div>
+  </form>

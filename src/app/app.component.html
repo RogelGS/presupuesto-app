@@ -1,0 +1,9 @@
+<app-header [budgetTotal]="getBudgetTotal()" [entryTotal]="getEntryTotal()" [egressTotal]="getEgressTotal()" [porcentTotal]="getPorcentTotal()"></app-header>
+
+<app-form></app-form>
+
+<div class="contenedor limpiarEstilos">
+  <app-entry></app-entry>
+
+  <app-egress [entryTotal]="getEntryTotal()"></app-egress>
+</div>
